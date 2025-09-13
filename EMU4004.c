@@ -631,7 +631,7 @@ void __interrupt(irq(IOC),base(8)) SYNC_ISR(){
 	asm("xorlw	0b11");			// 09 if it's 2? (note: there is XOR branch magic)
 	asm("bz		WRR");			// 10 (11) if it's 2 then ROM port out
 //	--------------- X1 state for WPM instruction Program memory write code E3 --
-	asm("WPM:");				// 11 currently not implemented
+	asm("WPM:");				// 11
 	while (!PHI2);				//    wait for X1 end
 	asm("comf	PORTA,w,c");	// 01 complement PORTA(it shuld be Acc) sand store to WREG
 	ACC		= WREG;				// 02 save Acc for running monitor
