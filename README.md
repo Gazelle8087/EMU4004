@@ -40,6 +40,9 @@ https://github.com/ryomuk/emu8080on4004/tree/main/prototype/src/emu.4k
 
 ## プリント基板
 
+EMU4004_100.zipは本製作に使った基板の製造データです。  
+要修正項目(後述)は反映されていません。  
+
 ![表](https://github.com/Gazelle8087/EMU4004/blob/main/pics/EMU4004_PCB_F.jpg)
 ![裏](https://github.com/Gazelle8087/EMU4004/blob/main/pics/EMU4004_PCB_B.jpg)
 
