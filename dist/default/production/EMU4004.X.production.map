@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:/Users/hiroy/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8\pic\dat\20250324195656_en.msgs \
   -pivt0x8=08h -cn -h+dist/default/production\EMU4004.X.production.sym \
   --cmf=dist/default/production\EMU4004.X.production.cmf -z -Q18F47Q84 \
-  -oC:\Users\hiroy\AppData\Local\Temp\xcBsjsg.1\driver_tmp_3.o \
+  -oC:\Users\hiroy\AppData\Local\Temp\xcAsmto.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/EMU4004.X.production.map \
-  --md=C:\Users\hiroy\AppData\Local\Temp\xcBsjsg.1\driver_tmp_0.dat -E1 \
+  --md=C:\Users\hiroy\AppData\Local\Temp\xcAsmto.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler -p_rom_text=10000h -ACODE=00h-01FFFFh \
   -ACONST=00h-01FFFFh -ASMALLCONST=04000h-040FFhx192,014000h-0140FFhx192 \
   -AMEDIUMCONST=04000h-0FFFFh,014000h-01FFFFh -ACOMRAM=0501h-055Fh \
@@ -41,7 +41,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\hiroy\AppData\Local\Temp\xcBsjsg.1\driver_tmp_14.o \
+  C:\Users\hiroy\AppData\Local\Temp\xcAsmto.\driver_tmp_14.o \
   dist/default/production\EMU4004.X.production.o 
 
 Object code version is 3.11
@@ -51,7 +51,7 @@ Machine type is 18F47Q84
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\hiroy\AppData\Local\Temp\xcBsjsg.1\driver_tmp_14.o
+C:\Users\hiroy\AppData\Local\Temp\xcAsmto.\driver_tmp_14.o
                 config                           300000   300000       23        0       4
                 init                              10EE2    10EE2        4     8000       0
                 reset_vec                             0        0        4        0       0
@@ -59,39 +59,39 @@ dist/default/production\EMU4004.X.production.o
                 config                           300000   300000       23        0       4
                 smallconst                         4000     4000       FA     2000       0
                 ivt0x8                                8        8      102        4       0
-                text26                            12178    12178      2C0     485E       0
-                text25                            133C8    133C8        2     485E       0
-                text24                            12AF4    12AF4      140     485E       0
-                text23                            126C6    126C6      286     485E       0
-                text22                            130B8    130B8       8A     485E       0
-                text21                            12D14    12D14       D0     485E       0
-                text20                            11B46    11B46      328     8000       0
-                text19                            13340    13340       2E     485E       0
-                text18                            11E6E    11E6E      308     8000       0
-                text17                            1324A    1324A       46     485E       0
-                text16                            12EB0    12EB0       BA     485E       0
-                text15                            12DE4    12DE4       CC     485E       0
-                text14                            1294C    1294C      1A8     485E       0
-                text13                            131BA    131BA       4A     485E       0
-                text12                            13290    13290       44     485E       0
-                text11                            133BC    133BC        C     485E       0
-                text10                            13018    13018       A0     485E       0
-                text9                             132D4    132D4       38     485E       0
-                text8                             13142    13142       78     485E       0
-                text7                             1330C    1330C       34     485E       0
+                text26                            12178    12178      2C0     8000       0
+                text25                            133C8    133C8        2     8000       0
+                text24                            12AF4    12AF4      140     8000       0
+                text23                            126C6    126C6      286     8000       0
+                text22                            130B8    130B8       8A     8000       0
+                text21                            12D14    12D14       D0     8000       0
+                text20                            11B48    11B48      328     8000       0
+                text19                            13340    13340       2E     8000       0
+                text18                            11E70    11E70      308     8000       0
+                text17                            1324A    1324A       46     8000       0
+                text16                            12EB0    12EB0       BA     8000       0
+                text15                            12DE4    12DE4       CC     8000       0
+                text14                            1294C    1294C      1A8     8000       0
+                text13                            131BA    131BA       4A     8000       0
+                text12                            13290    13290       44     8000       0
+                text11                            133BC    133BC        C     8000       0
+                text10                            13018    13018       A0     8000       0
+                text9                             132D4    132D4       38     8000       0
+                text8                             13142    13142       78     8000       0
+                text7                             1330C    1330C       34     8000       0
                 text6                             10EE6    10EE6      8C8     8000       0
-                text5                             12F6A    12F6A       AE     485E       0
-                text4                             12C34    12C34       E0     485E       0
-                text3                             12438    12438      28E     485E       0
-                text2                             13204    13204       46     485E       0
-                text1                             1339A    1339A       22     485E       0
-                text0                             117AE    117AE      398     8000       0
+                text5                             12F6A    12F6A       AE     8000       0
+                text4                             12C34    12C34       E0     8000       0
+                text3                             12438    12438      28E     8000       0
+                text2                             13204    13204       46     8000       0
+                text1                             1339A    1339A       22     8000       0
+                text0                             117AE    117AE      39A     8000       0
                 cstackCOMRAMhllhhl                  516      516        A      516       1
                 cstackCOMRAMhh                      528      528       38      528       1
                 cstackBANK5                         560      560       64      560       1
                 bssBANK53                          3508     3508       50     3508       1
                 bssBANK5                            5C4      5C4       11      560       1
-                cinit                             1336E    1336E       2C     485E       0
+                cinit                             1336E    1336E       2C     8000       0
                 _rom_text                         10000    10000      EE2     8000       0
 
 TOTAL           Name                               Link     Load   Length     Space
@@ -105,9 +105,9 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text23                            126C6    126C6      286         0
                 text22                            130B8    130B8       8A         0
                 text21                            12D14    12D14       D0         0
-                text20                            11B46    11B46      328         0
+                text20                            11B48    11B48      328         0
                 text19                            13340    13340       2E         0
-                text18                            11E6E    11E6E      308         0
+                text18                            11E70    11E70      308         0
                 text17                            1324A    1324A       46         0
                 text16                            12EB0    12EB0       BA         0
                 text15                            12DE4    12DE4       CC         0
@@ -125,7 +125,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text3                             12438    12438      28E         0
                 text2                             13204    13204       46         0
                 text1                             1339A    1339A       22         0
-                text0                             117AE    117AE      398         0
+                text0                             117AE    117AE      39A         0
                 cinit                             1336E    1336E       2C         0
                 _rom_text                         10000    10000      EE2         0
 
@@ -282,8 +282,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 cstackBANK5                    000560  000075  0005D5       560       1  BANK5   
                 bssBANK53                      003508  000050  003558      3508       1  BANK53  
                 smallconst                     004000  0000FA  0040FA      2000       0  SMALLCON
-                _rom_text                      010000  002176  012176      8000       0  CODE    
-                text26                         012178  001252  0133CA      485E       0  CODE    
+                _rom_text                      010000  0033CA  0133CA      8000       0  CODE    
 
 
 UNUSED ADDRESS RANGES
@@ -300,14 +299,12 @@ UNUSED ADDRESS RANGES
         CODE             000004-000007                4
                          00010A-003FFF             3EF6
                          0040FA-00FFFF             BF06
-                         012176-012177                2
                          0133CA-01FFFF             CC36
         COMRAM           000522-000522                1
         CONFIG           300023-300023                1
         CONST            000004-000007                4
                          00010A-003FFF             3EF6
                          0040FA-00FFFF             BF06
-                         012176-012177                2
                          0133CA-01FFFF             CC36
         EEDATA           380000-3803FF              400
         IDLOC            200000-20003F               40
@@ -723,7 +720,7 @@ __S0                        (abs)              0133CA
 __S1                        (abs)              003558
 __S4                        (abs)              000000
 __S5                        (abs)              000000
-___fladd                    text18             011E6E
+___fladd                    text18             011E70
 ___fladd@a                  cstackCOMRAMhh     00052C
 ___fladd@aexp               cstackCOMRAMhh     000535
 ___fladd@b                  cstackCOMRAMhh     000528
@@ -745,7 +742,7 @@ ___fleq@ff2                 cstackCOMRAMhh     00052C
 ___flge                     text21             012D14
 ___flge@ff1                 cstackCOMRAMhh     00054F
 ___flge@ff2                 cstackCOMRAMhh     000553
-___flmul                    text20             011B46
+___flmul                    text20             011B48
 ___flmul@a                  cstackCOMRAMhh     00053A
 ___flmul@aexp               cstackCOMRAMhh     000543
 ___flmul@b                  cstackCOMRAMhh     000536
@@ -790,11 +787,11 @@ __accesstop                 (abs)              000560
 __activetblptr              (abs)              000003
 __end_of_Default_ISR        text25             0133CA
 __end_of_SYNC_ISR           text26             012438
-__end_of___fladd            text18             012176
+__end_of___fladd            text18             012178
 __end_of___fldiv            text23             01294C
 __end_of___fleq             text22             013142
 __end_of___flge             text21             012DE4
-__end_of___flmul            text20             011E6E
+__end_of___flmul            text20             011E70
 __end_of___flneg            text19             01336E
 __end_of___flsub            text17             013290
 __end_of___fltol            text16             012F6A
@@ -806,7 +803,7 @@ __end_of_floorf             text14             012AF4
 __end_of_fputc              text10             0130B8
 __end_of_fputs              text9              01330C
 __end_of_labs               text13             013204
-__end_of_main               text0              011B46
+__end_of_main               text0              011B48
 __end_of_memcpy             text12             0132D4
 __end_of_pad                text8              0131BA
 __end_of_printf             text1              0133BC
@@ -838,10 +835,10 @@ __ptext14                   text14             01294C
 __ptext15                   text15             012DE4
 __ptext16                   text16             012EB0
 __ptext17                   text17             01324A
-__ptext18                   text18             011E6E
+__ptext18                   text18             011E70
 __ptext19                   text19             013340
 __ptext2                    text2              013204
-__ptext20                   text20             011B46
+__ptext20                   text20             011B48
 __ptext21                   text21             012D14
 __ptext22                   text22             0130B8
 __ptext23                   text23             0126C6
@@ -998,11 +995,11 @@ C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\__fpclassifyf.c esti
 
 EMU4004.c
 		_putch         		CODE           	133BC	0000	12
-		_main          		CODE           	117AE	0000	920
+		_main          		CODE           	117AE	0000	922
 		_SYNC_ISR      		CODE           	12178	0000	704
 		_Default_ISR   		CODE           	133C8	0000	2
 
-EMU4004.c estimated size: 1638
+EMU4004.c estimated size: 1640
 
 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\printf.c
 		_printf        		CODE           	1339A	0000	34
@@ -1020,7 +1017,7 @@ C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\fleq.c
 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\fleq.c estimated size: 138
 
 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcmul.c
-		___flmul       		CODE           	11B46	0000	808
+		___flmul       		CODE           	11B48	0000	808
 
 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcmul.c estimated size: 808
 
@@ -1072,7 +1069,7 @@ C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\doprnt.c estimated s
 
 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
 		___flsub       		CODE           	1324A	0000	70
-		___fladd       		CODE           	11E6E	0000	776
+		___fladd       		CODE           	11E70	0000	776
 
 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c estimated size: 846
 

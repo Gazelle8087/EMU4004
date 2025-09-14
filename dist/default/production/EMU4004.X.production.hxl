@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\hiroy\AppData\Local\Temp\xcBsjsg.1\driver_tmp_3.o
+ C:\Users\hiroy\AppData\Local\Temp\xcAsmto.\driver_tmp_3.o
  -Odist/default/production\EMU4004.X.production.hex
  -logfile=dist/default/production\EMU4004.X.production.hxl
  -addressing=1
@@ -9,23 +9,21 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\hiroy\AppData\Local\Temp\xcBsjsg.1\driver_tmp_3.o)
-  8h - 109h		(C:\Users\hiroy\AppData\Local\Temp\xcBsjsg.1\driver_tmp_3.o)
-  4000h - 40F9h		(C:\Users\hiroy\AppData\Local\Temp\xcBsjsg.1\driver_tmp_3.o)
-  10000h - 12175h		(C:\Users\hiroy\AppData\Local\Temp\xcBsjsg.1\driver_tmp_3.o)
-  12178h - 133C9h		(C:\Users\hiroy\AppData\Local\Temp\xcBsjsg.1\driver_tmp_3.o)
-  300000h - 300022h		(C:\Users\hiroy\AppData\Local\Temp\xcBsjsg.1\driver_tmp_3.o)
+  0h - 3h		(C:\Users\hiroy\AppData\Local\Temp\xcAsmto.\driver_tmp_3.o)
+  8h - 109h		(C:\Users\hiroy\AppData\Local\Temp\xcAsmto.\driver_tmp_3.o)
+  4000h - 40F9h		(C:\Users\hiroy\AppData\Local\Temp\xcAsmto.\driver_tmp_3.o)
+  10000h - 133C9h		(C:\Users\hiroy\AppData\Local\Temp\xcAsmto.\driver_tmp_3.o)
+  300000h - 300022h		(C:\Users\hiroy\AppData\Local\Temp\xcAsmto.\driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   10Ah - 3FFFh
   40FAh - FFFFh
-  12176h - 12177h
   133CAh - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\hiroy\AppData\Local\Temp\xcBsjsg.1\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\hiroy\AppData\Local\Temp\xcAsmto.\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -599,7 +597,7 @@
 00012140 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00012150 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00012160 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00012170 | H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1
+00012170 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00012180 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00012190 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000121A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

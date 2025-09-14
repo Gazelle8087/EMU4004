@@ -30,7 +30,7 @@
  * Repsitory https://github.com/Gazelle8087/EMU4004
  *
  * 2025/09/13  Rev. 1.00 Initial release
- *
+ * 2025/09/14  Rev. 1.01 bug fix(CM-RAM calculation fixed)
  */
 
 // CONFIG1
@@ -262,7 +262,6 @@ static unsigned int	i,j;
 const unsigned char rom[] __at(0x10000) = {
 #include "vtl.txt"
 //#include "calc.txt"
-//#include "emu.txt"
 };
 
 // ======================  main routine  =======================================
@@ -409,7 +408,7 @@ void main(void) {
 	PORT_03	= 00;	// set port 03 00
 	WPM_01	= 0x00;	// set WPM order low nibble
 	RPM_01	= 0x00;	// set RPM order low nibble
-	CMRAM0	= 0;	// CM-RAM set to select RAM0
+	CMRAM0	= 1;	// CM-RAM set to select RAM0
 	CMRAM1	= 0;	// CM-RAM set to select RAM0
 
 // 4004 start
@@ -438,8 +437,8 @@ void main(void) {
 				asm("andlw	0x0f");
 				asm("movwf	_ACCX,c");
 				asm("movff	_SRC,_SRCX");
-				asm("movff	_CMRAM1,_CMRAMX");
-				printf(" %03X %02X %01X %01X%02X %01X%01X%01X%01X  ",PCX,OPAX,ACCX,CMRAM1,SRCX,PORT_03,PORT_02,PORT_01,BANK_00);
+				asm("movff	_CMRAM0,_CMRAMX");
+				printf(" %03X %02X %01X %01X%02X %01X%01X%01X%01X  ",PCX,OPAX,ACCX,CMRAMX,SRCX,PORT_03,PORT_02,PORT_01,BANK_00);
 			}
 			printf("\r\n");
 		}
@@ -496,8 +495,8 @@ void __interrupt(irq(IOC),base(8)) SYNC_ISR(){
 	asm("swapf	wreg,w");		// 03 swap nibble
 	CMRAM0	= WREG;				// 04 save CMRAM0 for IO operation
 	asm("rrncf	wreg,w");		// 05 CMRAM1 = CMRAM0>>1
-	CMRAM1	= WREG;				// 06 save CMRAM1
-	NOP();						// 07
+	asm("andlw	0x07");			// 06
+	CMRAM1	= WREG;				// 07 save CMRAM1
 	NOP();						// 08
 	NOP();						// 09
 //	while (PHI2);				//    wait for M1 (no need)
@@ -508,10 +507,9 @@ void __interrupt(irq(IOC),base(8)) SYNC_ISR(){
 	asm("movwf	_OPAC,c");		// 14 save as OPAC
 	asm("andlw	0x03");			// 15 OPAC lower 2 bit for WRx RDx instruction
 	asm("movwf	_OPA2,c");		// 16 save as OPA2
-	FSR0L	= CMRAM0;			// 17 18
-	FSR0H	= SRC_start;		// 19 20 SRC ARRAY put on 0x500
+	FSR0L	= CMRAM1;			// 17 18
+	FSR0H	= SRC_start;		// 19 20
 	SRC		= INDF0;			// 21 22
-
 //	whhile (!PHI2);				//    wait for M1 end
 //	TRISA	= PORT_IN;			//    keep databus output throughout M2 end
 	asm("comf	PORTB,w,c");	// 01 read CM-ROM during M1(if it's 1 first cycle of 4040)
@@ -631,7 +629,7 @@ void __interrupt(irq(IOC),base(8)) SYNC_ISR(){
 	asm("xorlw	0b11");			// 09 if it's 2? (note: there is XOR branch magic)
 	asm("bz		WRR");			// 10 (11) if it's 2 then ROM port out
 //	--------------- X1 state for WPM instruction Program memory write code E3 --
-	asm("WPM:");				// 11
+	asm("WPM:");				// 11 currently not implemented
 	while (!PHI2);				//    wait for X1 end
 	asm("comf	PORTA,w,c");	// 01 complement PORTA(it shuld be Acc) sand store to WREG
 	ACC		= WREG;				// 02 save Acc for running monitor
