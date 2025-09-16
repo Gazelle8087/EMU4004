@@ -63,13 +63,13 @@
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"188 C:\Users\hiroy\MPLABXProjects\EMU4004.X\EMU4004.c
+"189 C:\Users\hiroy\MPLABXProjects\EMU4004.X\EMU4004.c
 [v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
-"191
+"192
 [v _putch putch `(v  1 e 1 0 ]
-"268
+"272
 [v _main main `(v  1 e 1 0 ]
-"448
+"454
 [v _SYNC_ISR SYNC_ISR `IIH(v  1 e 1 0 ]
 "43 C:/Users/hiroy/.mchp_packs/Microchip/PIC18F-Q_DFP/1.28.451/xc8\pic\include\proc/pic18f47q84.h
 [v _PWM2PR PWM2PR `VEus  1 e 2 @1138 ]
@@ -244,85 +244,85 @@
 [v _flags flags `uc  1 s 1 flags ]
 "185
 [v _dbuf dbuf `[80]uc  1 s 80 dbuf ]
-"222 C:\Users\hiroy\MPLABXProjects\EMU4004.X\EMU4004.c
+"223 C:\Users\hiroy\MPLABXProjects\EMU4004.X\EMU4004.c
 [v _P_MEM P_MEM `[3840]uc  1 s 3840 P_MEM ]
-"223
-[v _B_MEM B_MEM `[4096]uc  1 s 4096 B_MEM ]
 "224
-[v _M_RAM M_RAM `[2048]uc  1 s 2048 M_RAM ]
+[v _B_MEM B_MEM `[4096]uc  1 s 4096 B_MEM ]
 "225
-[v _S_RAM S_RAM `[2048]uc  1 s 2048 S_RAM ]
+[v _M_RAM M_RAM `[2048]uc  1 s 2048 M_RAM ]
 "226
+[v _S_RAM S_RAM `[2048]uc  1 s 2048 S_RAM ]
+"227
 [v _SRC_ARRAY SRC_ARRAY `[8]uc  1 s 8 SRC_ARRAY ]
-"228
-[v _BANK_00 BANK_00 `uc  1 s 1 BANK_00 ]
 "229
-[v _PORT_01 PORT_01 `uc  1 s 1 PORT_01 ]
+[v _BANK_00 BANK_00 `uc  1 s 1 BANK_00 ]
 "230
-[v _PORT_02 PORT_02 `uc  1 s 1 PORT_02 ]
+[v _PORT_01 PORT_01 `uc  1 s 1 PORT_01 ]
 "231
-[v _PORT_03 PORT_03 `uc  1 s 1 PORT_03 ]
+[v _PORT_02 PORT_02 `uc  1 s 1 PORT_02 ]
 "232
-[v _WPM_01 WPM_01 `uc  1 s 1 WPM_01 ]
+[v _PORT_03 PORT_03 `uc  1 s 1 PORT_03 ]
 "233
-[v _RPM_01 RPM_01 `uc  1 s 1 RPM_01 ]
+[v _WPM_01 WPM_01 `uc  1 s 1 WPM_01 ]
 "234
-[v _C_M1 C_M1 `uc  1 s 1 C_M1 ]
+[v _RPM_01 RPM_01 `uc  1 s 1 RPM_01 ]
 "235
-[v _OPR OPR `uc  1 s 1 OPR ]
+[v _C_M1 C_M1 `uc  1 s 1 C_M1 ]
 "236
-[v _OPA OPA `uc  1 s 1 OPA ]
+[v _OPR OPR `uc  1 s 1 OPR ]
 "237
-[v _OPAC OPAC `uc  1 s 1 OPAC ]
+[v _OPA OPA `uc  1 s 1 OPA ]
 "238
-[v _OPA2 OPA2 `uc  1 s 1 OPA2 ]
+[v _OPAC OPAC `uc  1 s 1 OPAC ]
 "239
-[v _CMRAM0 CMRAM0 `uc  1 s 1 CMRAM0 ]
+[v _OPA2 OPA2 `uc  1 s 1 OPA2 ]
 "240
-[v _CMRAM1 CMRAM1 `uc  1 s 1 CMRAM1 ]
+[v _CMRAM0 CMRAM0 `uc  1 s 1 CMRAM0 ]
 "241
-[v _SRC SRC `uc  1 s 1 SRC ]
+[v _CMRAM1 CMRAM1 `uc  1 s 1 CMRAM1 ]
 "242
-[v _ROM_01 ROM_01 `uc  1 s 1 ROM_01 ]
+[v _SRC SRC `uc  1 s 1 SRC ]
 "243
-[v _ROMIN1 ROMIN1 `uc  1 s 1 ROMIN1 ]
+[v _ROM_01 ROM_01 `uc  1 s 1 ROM_01 ]
 "244
-[v _ROMOUT1 ROMOUT1 `uc  1 s 1 ROMOUT1 ]
+[v _ROMIN1 ROMIN1 `uc  1 s 1 ROMIN1 ]
 "245
-[v _PC1 PC1 `uc  1 s 1 PC1 ]
+[v _ROMOUT1 ROMOUT1 `uc  1 s 1 ROMOUT1 ]
 "246
-[v _PC2 PC2 `uc  1 s 1 PC2 ]
+[v _PC1 PC1 `uc  1 s 1 PC1 ]
 "247
-[v _PC3 PC3 `uc  1 s 1 PC3 ]
+[v _PC2 PC2 `uc  1 s 1 PC2 ]
 "248
-[v _ACC ACC `uc  1 s 1 ACC ]
+[v _PC3 PC3 `uc  1 s 1 PC3 ]
 "249
+[v _ACC ACC `uc  1 s 1 ACC ]
+"250
 [v _NUM0F NUM0F `uc  1 s 1 NUM0F ]
-"251
-[v _PCX PCX `ui  1 s 2 PCX ]
 "252
-[v _PC2X PC2X `uc  1 s 1 PC2X ]
+[v _PCX PCX `ui  1 s 2 PCX ]
 "253
-[v _PC3X PC3X `uc  1 s 1 PC3X ]
+[v _PC2X PC2X `uc  1 s 1 PC2X ]
 "254
-[v _OPRX OPRX `uc  1 s 1 OPRX ]
+[v _PC3X PC3X `uc  1 s 1 PC3X ]
 "255
-[v _OPAX OPAX `uc  1 s 1 OPAX ]
+[v _OPRX OPRX `uc  1 s 1 OPRX ]
 "256
-[v _SRCX SRCX `uc  1 s 1 SRCX ]
+[v _OPAX OPAX `uc  1 s 1 OPAX ]
 "257
-[v _ACCX ACCX `uc  1 s 1 ACCX ]
+[v _SRCX SRCX `uc  1 s 1 SRCX ]
 "258
+[v _ACCX ACCX `uc  1 s 1 ACCX ]
+"259
 [v _CMRAMX CMRAMX `uc  1 s 1 CMRAMX ]
-"260
+"261
 [v _i i `ui  1 s 2 i ]
 [v _j j `ui  1 s 2 j ]
-"262
+"264
 [v _rom rom `C[3810]uc  1 e 3810 @65536 ]
-"268
+"272
 [v _main main `(v  1 e 1 0 ]
 {
-"446
+"452
 } 0
 "5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\printf.c
 [v _printf printf `(i  1 e 2 0 ]
@@ -470,13 +470,13 @@
 [v fputc@fp fp `*.39S630  1 p 2 3 ]
 "24
 } 0
-"191 C:\Users\hiroy\MPLABXProjects\EMU4004.X\EMU4004.c
+"192 C:\Users\hiroy\MPLABXProjects\EMU4004.X\EMU4004.c
 [v _putch putch `(v  1 e 1 0 ]
 {
 [v putch@c c `uc  1 p 1 wreg ]
 [v putch@c c `uc  1 p 1 wreg ]
 [v putch@c c `uc  1 p 1 0 ]
-"194
+"195
 } 0
 "4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\memcpy.c
 [v _memcpy memcpy `(*.39v  1 e 3 0 ]
@@ -642,12 +642,12 @@
 [v ___xxtofl@sign sign `uc  1 p 1 8 ]
 "44
 } 0
-"188 C:\Users\hiroy\MPLABXProjects\EMU4004.X\EMU4004.c
+"189 C:\Users\hiroy\MPLABXProjects\EMU4004.X\EMU4004.c
 [v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
 {
 } 0
-"448
+"454
 [v _SYNC_ISR SYNC_ISR `IIH(v  1 e 1 0 ]
 {
-"859
+"873
 } 0
