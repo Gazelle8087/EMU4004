@@ -31,6 +31,7 @@
  *
  * 2025/09/13  Rev. 1.00 Initial release
  * 2025/09/14  Rev. 1.01 bug fix(CM-RAM calculation fixed)
+ * 2025/09/16  Rev. 1.02 BBS instruction implemented(needed for SRC receive)
  */
 
 // CONFIG1
@@ -259,9 +260,12 @@ static unsigned char	CMRAMX	__at(0x527);
 
 static unsigned int	i,j;
 
+#define	running_monitor
 const unsigned char rom[] __at(0x10000) = {
+//#include "loop4004.txt"
 #include "vtl.txt"
 //#include "calc.txt"
+//#include "emu.txt"
 };
 
 // ======================  main routine  =======================================
@@ -426,6 +430,7 @@ void main(void) {
 	LATD4	= 1;	// release RESET and start 4004/4040
 
 	while(1) {
+#ifdef running_monitor
 		printf("\e[H");
 		for (i=0; i<23; i++) {
 			for (j=0; j<4; j++) {
@@ -434,14 +439,15 @@ void main(void) {
 				asm("comf	_OPA,w,c");
 				asm("movwf	_OPAX,c");
 				asm("movf	_ACC,w,c");
-				asm("andlw	0x0f");
+				asm("andlw	0x01f");
 				asm("movwf	_ACCX,c");
 				asm("movff	_SRC,_SRCX");
 				asm("movff	_CMRAM0,_CMRAMX");
-				printf(" %03X %02X %01X %01X%02X %01X%01X%01X%01X  ",PCX,OPAX,ACCX,CMRAMX,SRCX,PORT_03,PORT_02,PORT_01,BANK_00);
+				printf(" %03X %02X %02X %01X%02X %01X%01X%01X%01X ",PCX,OPAX,ACCX,CMRAMX,SRCX,PORT_03,PORT_02,PORT_01,BANK_00);
 			}
 			printf("\r\n");
 		}
+#endif
 	}
 }
 //==============================================================================
@@ -478,9 +484,7 @@ void __interrupt(irq(IOC),base(8)) SYNC_ISR(){
 	asm("andlw	0x0f");			// 12 WREG &= 0x0f
 	PC3		= WREG;				// 13 save PCH for running monitor
 	asm("cpfsgt	_NUM0F,c");		// 14 is it banked area? (if (PC3<0x0f) then skip next instruction)
-//	NOP();						// 14
 	asm("addwf	_BANK_00,w,c");	// 15 modify ram address in PIC
-//	NOP();						// 15
 	asm("addlw	high _P_MEM");	// 16 WREG += P_MEM (it's 0x06)
 	FSR0H	= WREG;				// 17 save FSR0H
 	asm("comf	indf0,w,c");	// 18 complement Program memory and store to WREG
@@ -781,10 +785,20 @@ void __interrupt(irq(IOC),base(8)) SYNC_ISR(){
 	asm("comf	_OPA,w,c");		// 15 check OP code
 	asm("xorlw	0x0e");			// 16 if it's 0x0e? (RPM OP code)
 	asm("bz		RPM");			// 17 (18) then it's RPM instruction
-	asm("bra	not_4040rpm");	// 18 19
+	asm("xorlw	0x0c");			// 18 0x0E XOR 0x02 = 0x0C
+	asm("bz		BBS");			// 19 
+	asm("bra	not_4040rpm");	// 20 21
+//	=============== BBS instruction ============================================
+	asm("BBS:");				// 19
+	NOP();						// 19
+	NOP();						// 20
+	NOP();						// 21
+//	while (!PHI2);				//    wait for M2 end
+	TRISA	= PORT_IN;			//    data bus INPUT
+	while (PHI2);				//    wait for X1
+	asm("bra	src_io");		// 01
 //	=============== RPM instruction ============================================
-	asm("RPM:");				// 18
-	NOP();						// 18
+	asm("RPM:");				// 19
 	NOP();						// 19
 	NOP();						// 20
 	NOP();						// 21
@@ -807,9 +821,9 @@ void __interrupt(irq(IOC),base(8)) SYNC_ISR(){
 	NOP();						// 17
 	NOP();						// 18
 	NOP();						// 19
-	asm("not_4040rpm:");		// 
 	NOP();						// 20
 	NOP();						// 21
+	asm("not_4040rpm:");		// 
 //	while (!PHI2);				//    wait for M2 end
 	TRISA	= PORT_IN;			//    data bus INPUT
 	while (PHI2);				//    wait for X1
