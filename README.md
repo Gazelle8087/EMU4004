@@ -153,4 +153,4 @@ https://vintagechips.wordpress.com/2022/03/05/emuz80_reference/
 ## 変更履歴
 2025/09/13 Rev. 1.00 初回公開  
 2025/09/14 Rev. 1.01 CM-RAM 処理間違い修正  
-
+2025/09/16 Rev. 1.02 BBS(4040拡張命令)でSRCを受け取るようにした  
